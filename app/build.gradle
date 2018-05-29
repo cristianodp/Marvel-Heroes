@@ -1,0 +1,71 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+android {
+    compileSdkVersion 27
+    defaultConfig {
+        applicationId "br.com.cristiano.marvelheroes"
+        minSdkVersion 22
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+ext {
+    retrofitVersion = '2.4.0'
+    supportVersion = '27.1.1'
+    archComponentsVersion = '1.1.1'
+    roomVersion = '1.1.0-beta1'
+}
+
+dependencies {
+
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    //noinspection GradleCompatible
+    implementation "com.android.support:appcompat-v7:$supportVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    /* Designer */
+    implementation "com.android.support:design:$supportVersion"
+    implementation "com.android.support:cardview-v7:$supportVersion"
+    implementation "com.android.support:recyclerview-v7:$supportVersion"
+
+    //utils
+    implementation 'org.apache.commons:commons-lang3:3.6'
+    implementation group: 'commons-io', name: 'commons-io', version: '2.4'
+    implementation 'org.glassfish:javax.annotation:10.0-b28'
+    implementation 'com.squareup.picasso:picasso:2.71828'
+
+    // rest interrations
+    implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+
+    // JSON Parsing
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+    implementation 'com.google.code.gson:gson:2.8.4'
+
+    // http logging
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.9.1'
+
+    implementation "android.arch.lifecycle:extensions:$archComponentsVersion"
+    implementation "android.arch.lifecycle:runtime:$archComponentsVersion"
+    implementation "android.arch.persistence.room:runtime:$roomVersion"
+    implementation 'com.github.bumptech.glide:glide:3.7.0'
+
+
+}

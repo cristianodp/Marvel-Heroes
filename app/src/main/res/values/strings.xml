@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Personagens</string>
+
+    <string name="app_list_activity">Personagens</string>
+    <string name="app_detail_activity">Detalhes</string>
+
+
+    <string name="app_message_waint">Processando...</string>
+    <string name="app_message_void_state">Pesquise\n os\n Personagens</string>
+    <string name="app_message_no_data_found_state">Nenhum\n Personagem\n Encontrado</string>
+
+    <string name="title_search">Pesquisar</string>
+    <string name="title_name">Nome</string>
+    <string name="title_description">Descrição</string>
+</resources>

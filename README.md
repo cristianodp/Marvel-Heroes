@@ -1,2 +1,2 @@
 # Marvel-Herous
-Example of infinite list Marvel API
+Example of infinite list with Marvel API
